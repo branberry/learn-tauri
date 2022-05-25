@@ -3,9 +3,10 @@ import logo from './logo.svg';
 import { invoke } from '@tauri-apps/api';
 
 import './App.css';
+import { safeInvoke } from './util/tauri-helper';
 
 function App() {
-  invoke('test');
+  safeInvoke('test');
   return (
     <div className="App">
       <header className="App-header">
